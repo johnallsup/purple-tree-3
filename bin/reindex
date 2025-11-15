@@ -1,0 +1,6 @@
+#!/bin/bash
+A="$(readlink -f "$0")"
+D="$(dirname "$A")"
+cd "$D"
+./makeindex_data.py
+./makerecent.py

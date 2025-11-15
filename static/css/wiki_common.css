@@ -1,0 +1,1447 @@
+/*** TOPLEVEL ***/
+html {
+  font-family: "Adobe Caslon Pro", "Adobe Garamond Pro", "EB Garamond", "Palatino Linotype", "Palatino", serif;
+  font-size: 12pt;
+}
+
+body {
+  color: white;
+  background-color: #007;
+  position: relative;
+}
+body.mono section.main {
+  font-family: "Hack Nerd Font Mono", monospace;
+}
+body.pre section.main {
+  white-space: pre;
+}
+
+/*** CONTAINER ***/
+div.container {
+  position: relative;
+  color: black;
+  box-shadow: 0rem 1rem 1rem black;
+}
+
+/*** HEADER ***/
+
+div.container > header h1 span.homesuffix {
+  font-size: 0.7em;
+  color: gray;
+}
+div.container > header section.title nav {
+  background-color: black;
+  padding: 0.5em 2em;
+  color: white;
+}
+div.container > header section.title nav p {
+  display: inline-block;
+  margin: 0px;
+}
+div.container > header section.title nav a {
+  color: #aaf;
+}
+/*** HEADER ***/
+div.container > header {
+  font-family: sans-serif;
+  background-color: black;
+  position: relative;
+  color: white;
+}
+body.hide-header header {
+  display: none;
+}
+div.container > header a {
+  color: inherit;
+  text-decoration: none;
+}
+div.container > header section > div {
+  display: flex;
+  flex-direction: row;
+}
+div.container > header .spread {
+  justify-content: space-around;
+}
+div.container > header .spreadwide {
+  justify-content: space-between;
+}
+div.container > header .info {
+  padding: 0.5em 2em;
+  background-color: #222;
+}
+div.container > header section .spacer {
+  flex-grow: 1;
+}
+div.container > header section.topbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; /* spread so that it is hard to press the wrong one */
+}
+div.container > header section.topbar {
+  flex-wrap: wrap;
+}
+div.container > header section .icon.block {
+  padding: 0px;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  font-size: 1.5rem;
+}
+div.container > header section .block {
+  padding: 0.5rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  display: inline-block;
+  overflow: hidden;
+  font-size: 1rem;
+  text-align: center;
+  vertical-align: top;
+  line-height: 2em;
+  height: 2em;
+  min-width: 2em;
+}
+div.container > header section.title {
+  display: block;
+  xpadding: 0.5rem;
+  background-color: orange;
+}
+div.container > header section.title {
+  padding-bottom: 0.9rem;
+}
+div.container > header section.options {
+  background: #700;
+  display: none;
+  padding: 0.5rem;
+}
+div.container > header section.title h1.page-title {
+  margin-top: 0px;
+  text-align: center;
+  margin-bottom: 0.1rem;
+}
+div.container > header section.title h2.page-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-top: 0.1rem;
+}
+
+/** BREADCRUMBS **/
+div.container > header span.breadcrumbs a {
+  margin-right: 0.5em;
+}
+
+/** TAGS **/
+div.container > header div.tags ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+div.container > header div.tags ul li a {
+  display: inline-block;
+  padding: 0.3em;
+}
+div.container > header div.tags ul li {
+  display: inline-block;
+  border: 1px solid black;
+  box-shadow: 0.3em 0.3em 0.3em black;
+  margin: 0.3em;
+}
+div.container > header span.hashtags span.hashtag {
+  font-style: italic;
+}
+div.container > header span.hashtags span.hashtag a {
+  color: inherit;
+  text-decoration: none;
+}
+div.container > header span.hashtags span.hashtag a:hover {
+  color: #77f;
+  text-decoration: underline;
+}
+div.container > header span.hashtags span.hashtag::before {
+  content: "#";
+  font-style: italic;
+  color: #ff7;
+}
+
+/** TODO: Media Print **/
+/* Hide options and stuff */
+/* Show full date/time of modification */
+/* Show breadcrumbs on same line as mtime */
+/* Header has 1px solid bottom border */
+/* Hide navbar */
+/* Show only title */
+
+/** NAVBAR **/
+div.container > header nav ul {
+  margin: 0px;
+  margin-top: 0.5rem;
+  padding: 0px;
+}
+div.container > header nav ul li {
+  display: inline-block; margin-right: 1em;
+}
+div.container > header nav a {
+  text-decoration: none;
+}
+div.container > header nav ul li {
+  display: inline-block;
+  padding-left: 0;
+  padding-right: 300px;
+  list-style-type: none;
+  background-color: #007;
+  color: #ddd;
+  border: 1px solid black;
+  box-shadow: 5px 5px 5px black;
+  font-size: 1.1em;
+  padding: 0.4em;
+}
+div.container > header nav a, 
+div.container > header nav a:visited {
+  color: #007;
+  
+}
+div.container > header nav a:hover {
+  color: #00f;
+}
+
+/*** CONTENT ***/
+section.main {
+  background-color: white;
+  position: relative;
+}
+section.main .error {
+  color: red;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+h1.about {
+  color: #700;
+}
+h1.about span.ancestors {
+  color: #744;
+  font-size: 0.8em;
+}
+h1.about span.dirname {
+  color: #a00;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: sans-serif;
+}
+h1 {
+  font-size: 1.7rem;
+}
+div.h1style1 + h1 {
+  border-top: 3px solid #007;
+  padding-top: 0.5rem;
+  text-align: center;
+  color: #007;
+  background-color: #eef;
+  border-bottom: 1px solid #aaf;
+  padding-bottom: 0.3rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.35rem;
+}
+h4 {
+  font-size: 1.2rem;
+}
+h5 {
+  font-size: 1.1rem;
+}
+h6 {
+  font-size: 1.05rem;
+  font-style: italic;
+}
+
+/*** IMAGES ***/
+section.main img {
+  max-width: 512px;
+  max-height: 512px;
+}
+
+section.main img.ptimg {
+  display: block;
+}
+section.main img.ptimg:not(.centre):not(.cs,.csb) {
+  margin: 0.5rem;
+}
+section.main .centre,
+section.main .ptimg.centre {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+section.main .cs {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0.5rem 0.5rem 0.5rem black;
+}
+section.main .ptimg.csb {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0.5rem 0.5rem 0.5rem black;
+  border: 2px solid black;
+}
+section.main .floatleft {
+  float: left;
+}
+section.main .floatright {
+  float: right;
+}
+section.main img.big {
+  max-height: 1024px;
+  max-width: none;
+  width: 100%;
+}
+section.main img.small {
+  max-width: 256px;
+  max-height: 256px;
+}
+section.main .img-box-container {
+  text-align: center;
+}
+section.main .img-box {
+  display: inline-block;
+  margin: 1rem;
+}
+section.main .img-box img.ptimg {
+  margin: 0px;
+  padding: 0px;
+}
+section.main .img-box div.caption {
+  text-align: center;
+}
+section.main .shadow {
+  box-shadow: 0.5rem 0.5rem 0.5rem black;
+}
+section.main .border {
+  border: 1px solid black;
+}
+section.main .border2 {
+  border: 2px solid black;
+}
+section.main img.boxed {
+  border: 1px solid black;
+  padding: 1rem;
+}
+section.main .black {
+  background-color: black;
+  color: white;
+}
+
+/* 1.1 numbering */
+ol { counter-reset: item }
+ol ol > li{ display: block }
+ol ol > li:before { content: counters(item, ".") ". "; }
+ol > li { counter-increment: item; }
+ol ol, ol ul, ul ol, ul ul { padding-left: 1em; }
+
+/* quick keys */
+span.quick-key {
+  vertical-align: super;
+  font-size: 0.8em;
+}
+body.mobile span.quick-key {
+  display: none;
+}
+
+/*** DIALOGS ***/
+dialog {
+  font-family: sans-serif;
+  padding: 0;
+  border-radius: 0.5em;
+  text-align: center;
+  background-color: white;
+  position: relative;
+}
+dialog {
+  box-shadow: 0.5rem 0.5rem 0.8rem black;
+}
+dialog {
+  overflow-y: auto;
+}
+div.overlay header section.topbar,
+dialog header section.topbar {
+  font-size: 2rem;
+  display: flex;
+}
+dialog.left-justify {
+  text-align: left;
+}
+dialog header section.topbar span.pagename-before {
+  font-size: 1.3rem;
+  color: #aaa;
+}
+dialog header section.topbar {
+  color: white;
+  background-color: #007;
+}
+div.overlay header section.topbar span.spacer,
+dialog header section.topbar span.spacer {
+  flex-grow: 1;
+}
+div.overlay header section.topbar span.spacer2,
+dialog header section.topbar span.spacer2 {
+  flex-grow: 2;
+}
+dialog div.close-button {
+  position: absolute;
+  top: 100%;
+  right: 100%;
+}
+dialog .bigtext {
+  font-size: 1.5em;
+}
+dialog.goto input {
+  font-size: 2em;
+  background-color: #ffa;
+}
+dialog.versions-box {
+}
+dialog.versions-box ul {
+  list-style-type: none;
+}
+dialog.versions-box table {
+  width: 100%;
+}
+dialog.versions-box td {
+  min-width: 30%;
+}
+dialog.uploadinfo {
+  font-size: 1.2em;
+  background-color: yellow;
+  color: black;
+}
+dialog.uploadinfo[status="success"] {
+  background-color: #afa;
+}
+dialog.uploadinfo[status="mixed"] {
+  background-color: #ffa;
+}
+dialog.uploadinfo[status="fail"] {
+  background-color: #700;
+  color: white;
+}
+dialog.uploadinfo img {
+  max-width: 6rem;
+  height: 2rem;
+}
+dialog header {
+  xheight: 1.5em;
+}
+dialog header .title {
+  display: block;
+  margin: 0px;
+  margin-top
+  flex-grow: 1;
+}
+body:not(.auth) dialog span.open-in-edit-mode {
+  display: none;
+}
+dialog .flag {
+  background-color: #aac;
+  padding: 0.1em;
+  border: 1px solid black;
+  margin: 0.2em;
+  box-shadow: 0.3em 0.3em 0.3em black;
+}
+dialog .flag[state="on"] {
+  background-color: #a7a;
+  box-shadow: 0.1em 0.1em 0.1em black;
+  transform: translate(0.2em, 0.2em);
+}
+dialog .go-button {
+  background-color: #070;
+  color: white;
+  font-weight: bold;
+  font-family: sans-serif;
+  padding: 0.1em;
+  border: 1px solid black;
+  margin: 0.2em;
+  box-shadow: 0.3em 0.3em 0.3em black;
+}
+
+/*** UTILITY ***/
+.centre {
+  text-align: center;
+}
+.block {
+  display: block;
+}
+img .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+img .box {
+  display: block;
+  border: 1px solid black;
+  border-radius: 0.3em;
+  box-shadow: 0.3em 0.3em 0.3em black;
+  padding: 1em;
+}
+
+/*** CODE BLOCKS ***/
+pre:has(code) {
+  font-family: monospace;
+  color: red;
+  padding: 1em;
+  border: 1px solid black;
+  box-shadow: 5px 5px 5px black;
+  background: #2b2b2b;
+  color: #f8f8f2;
+  overflow-x: auto;
+}
+pre:has(code.language-glish) {
+  background: #cfc;
+  color: black;
+}
+pre > code.language-prose {
+  font-family: serif;
+}
+pre > code {
+  padding: 0px;
+  white-space: pre;
+  background-color: transparent;
+}
+body.pre-wrap pre > code {
+  white-space: pre-wrap;
+}
+code {
+  padding: 0.1em;
+  background-color: hsla(0,0%,90%,50%);
+}
+
+/*** Add block handlers to generate these ***/
+pre.prose {
+  font-family: inherit;
+}
+pre.prose.indent {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+pre.prose.pagify {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+pre.pagify {
+  margin: 1em;
+  border: 1px solid black;
+  padding: 1em;
+  background-color: white;
+  box-shadow: 0.5em 0.5em 0.5em black;
+}
+
+div.emoji {
+  padding: 0.8rem;
+  margin: 0.3rem;
+  border: 1px solid black;
+  background-color: #eee;
+  border-radius: 0.2rem;
+  box-shadow: 0.5rem 0.5rem 0.5rem black; 
+}
+div.emoji span.unicode-char {
+  margin: 0px 1rem;
+  padding: 0.2rem;
+  border: 1px solid #777;
+  background-color: #ccc;
+}
+div.emoji span.unicode-char span {
+  padding: 0.3rem;
+  margin: 0.5rem;
+}
+div.emoji span.unicode-char span.emoji-char {
+  display: inline-block;
+  font-size: 1.8rem;
+  border: 1px solid #777;
+  box-shadow: 0.3rem 0.3rem 0.3rem black; 
+  background-color: white;
+}
+
+/*** BLOCK COPY ***/
+pre code {
+  position: relative;
+}
+pre code .copy-button {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  content: "";
+}
+pre.jda-selected {
+  border: 2px solid red;
+}
+pre.jda-copied {
+  border: 2px solid #7F7;
+}
+
+/*** UPLOAD RESULT ***/
+div.upload-result {
+  background-color: yellow;
+  color: black;
+}
+div.upload-result h1 {
+  color: purple;
+}
+div.upload-result .upload-result-message {
+  color: #070;
+}
+div.upload-result div.upload-result-files {
+  border: 2px solid orange;
+}
+div.upload-result div.upload-result-file {
+  border: 2px solid blue;
+}
+div.upload-result div.upload-result-file img {
+  margin-left: 1em;
+  height: 3em;
+  max-width: 4em;
+}
+
+/*** for highlighting matching paras ***/
+.matching {
+  background-color: #007 !important;
+  color: white !important;
+}
+
+/*** BLOCK SPECIALS ***/
+
+div.cquote ,
+div.aquote {
+  text-align: center;
+  margin: 1rem;
+}
+div.aquote div.quote ,
+div.cquote div.quote {
+  display: inline-block;
+}
+div.cquote div.quote p {
+  text-align: left;
+  white-space: pre;
+  margin: 0px;
+  margin-bottom: 0.5rem;
+}
+div.aquote div.quote p {
+  text-align: left;
+  margin: 0px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-bottom: 0.5rem;
+}
+div.aquote div.quote p:last-child ,
+div.cquote div.quote p:last-child {
+  margin-bottom: 0px;
+}
+div.aquote div.attrib ,
+div.cquote div.attrib {
+  text-align: right;
+  font-style: italic;
+}
+div.aquote div.attrib:before ,
+div.cquote div.attrib:before {
+  content: "— ";
+}
+div.glish {
+  white-space: pre-wrap;
+  font-family: "Hack Nerd Font Mono", "Hack", monospace;
+  background-color: #ccc;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid black;
+  box-shadow: 0.6rem 0.6rem 0.6rem black;
+}
+div.glish.glishred {
+  background-color: #fcc;
+}
+div.glish.glishamber {
+  background-color: #fdc;
+}
+div.glish.glishorange {
+  background-color: #fcc;
+}
+div.glish.glishyellow {
+  background-color: #ffc;
+}
+div.glish.glishgreen {
+  background-color: #cfc;
+}
+div.glish.glishblue {
+  background-color: #ccf;
+}
+div.glish p {
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+div.glish h1 {
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  font-size: 1.5rem;
+}
+div.glish h2 {
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  font-size: 1.3rem;
+}
+div.glish h3 {
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  font-size: 1.2rem;
+}
+div.glish p:first-child {
+  margin-top: 0px;
+}
+div.glish p:last-child {
+  margin-bottom: 0px;
+}
+div.dham {
+
+}
+div.dham p {
+  margin-bottom: 0.5rem;
+  padding-left: 3em;
+  text-indent: -3em;
+}
+div.dham span.verse-number {
+  display: inline-block;
+  text-indent: 0em;
+  width: 3em;
+  color: #733;
+  font-family: Optima, sans-serif;
+}
+div.dham span.verse-text {
+  font-family: "Adobe Caslon Pro", "URW Palladio", serif;
+}
+
+div.marginpar {
+  float: right;
+  width: 30%;
+  margin: 0.3rem;
+  padding: 0.3rem;
+  box-shadow: 0.4rem 0.4rem 0.4rem black;
+  border: 1px solid black;
+  background-color: #eec;
+}
+div.marginpar p {
+  margin: 0px;
+  padding: 0px;
+}
+
+div.boxed1 {
+  margin: 0.6rem;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  box-shadow: 0.4rem 0.4rem 0.4rem black;
+  border: 1px solid black;
+  background-color: #ccc;
+}
+span.done_button {
+  display: inline-block;
+  background-color: #070;
+  color: white;
+  font-family: "Hack Nerd Font Mono", monospace;
+  padding: 0.3rem;
+  border: 1px solid black;
+  box-shadow: 0.3rem 0.3rem 0.3rem black;
+}
+div.block-special :first-child {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+div.block-special :last-child {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+div.remarks.boxed1 {
+  background-color: #cfc;
+}
+div.boxed1 div.heading {
+  font-weight: bold;
+  font-family: sans-serif;
+}
+div.boxed1 div.heading.h1 {
+  font-size: 1.5em;
+}
+div.boxed1 div.heading.h2 {
+  font-size: 1.4em;
+}
+div.boxed1 div.heading.h3 {
+  font-size: 1.3em;
+}
+div.boxed1 div.heading.h4 {
+  font-size: 1.2em;
+}
+div.boxed1 div.heading.h5 {
+  font-size: 1.1em;
+}
+div.boxed1 div.heading.h6 {
+  font-size: 1.0em;
+}
+
+div.embedded-video {
+  width: 70%;
+}
+
+span.audio-item {
+  display: inline-block;
+}
+span.audio-item.box {
+  position: relative;
+  border: 1px solid black;
+  background-color: #ddd;
+  padding: 0.3rem;
+  box-shadow: 0.3rem 0.3rem 0.3rem black; 
+}
+div.audio1 {
+  font-family: "Adobe Caslon Pro", serif;
+  padding: 0.5em 1em;
+  margin: 1em;
+  margin-bottom: 1.5em;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  background-color: #ddd;
+  box-shadow: 0.5em 0.5em 0.5em black;
+}
+div.audio1 div.audio-item {
+  display: flex;
+  position: relative;
+  margin: 0.1rem;
+  padding: 0.1rem;
+  xborder: 1px solid #777;
+  border-radius: 0.3rem;
+} 
+div.audio1 div.audio-item span.audio-item-name {
+  padding-top: 0.8rem;
+  padding-right: 1rem;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+div.poem {
+  font-family: "Adobe Caslon Pro", serif;
+  padding: 0.5em 1em;
+  margin: 1em;
+  margin-bottom: 1.5em;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  background-color: #ddd;
+  box-shadow: 0.5em 0.5em 0.5em black;
+}
+div.large {
+  font-size: 1.8rem;
+}
+div.poem p {
+  white-space: pre;
+}
+body.wrap div.poem p {
+  white-space: normal;
+}
+
+div.poem div.meta {
+  font-family: sans-serif;
+}
+div.poem div.meta-item span.key {
+  color: #555;
+}
+div.poem div.meta-item span.value {
+  font-style: italic;
+}
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+div.csvtable {
+  overflow-x: auto;
+}
+table.vert td {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+table.hpad td,
+table.hpad th {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+table td,
+table th {
+  text-align: left;
+  padding: 0.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+table tr.rule-before {
+  border-top: 1px solid black;
+}
+table thead {
+  border-bottom: 1px solid black;
+  background-color: #007;
+  color: white;
+}
+table tr:nth-child(even) {
+  background-color: #ddd;
+}
+a,a:visited {
+  color: #007;
+  text-decoration: none;
+}
+table.lnb td:first-child {
+  white-space: pre;
+}
+
+
+/*** BLOCK SPECIALS ***/
+table.keyboard-shortcuts {
+  padding: 0.3rem;
+}
+table.keyboard-shortcuts td.comment {
+  font-style: italic;
+}
+table.keyboard-shortcuts td.combo {
+  font-family: monospace;
+  min-width: 5em;
+}
+table.keyboard-shortcuts td.description {
+}
+
+pre.chords1 {
+  background-color: #ffd;
+  padding: 1rem;
+  margin: 0.5rem;
+  box-shadow: 0.5rem 0.5rem 0.5rem black; 
+  border: 1px solid black;
+  border-radius: 0.4rem;
+}
+
+div.langue1 {
+}
+div.langue1 table.langue1-table {
+  margin: 1rem 0;
+  border: 1px solid black;
+  padding: 0rem;
+  background-color: #ddd;
+  border: 1px solid black; 
+  width: 100%;
+  box-shadow: 0.3rem 0.3rem 0.4rem black;
+}
+div.langue1 table.langue1-table td.heading {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+div.langue1 table.langue1-table td {
+  min-width: 30%;
+  padding-left: 0.5rem;
+}
+div.langue1 table.langue1-table tr:nth-child(even) {
+  background-color: #ccc;
+}
+
+div.duolingo-sentences {
+  margin: 1em 0;
+  box-shadow: 0.3em 0.3em 0.3em black;
+  background-color: #dde;
+  padding: 1rem;
+}
+div.duolingo-sentences p.duolingo-comment {
+  margin: 0px;
+  font-style: italic;
+}
+div.duolingo-sentences span.source-lang,
+div.duolingo-sentences span.target-lang {
+  font-size: 0.7em;
+  color: #555;
+}
+div.duolingo-sentences div.duolingo-sentence {
+  margin: 1rem 0;
+}
+
+div.quotes1 {
+  position: relative;
+  background-color: #ddd;
+  padding: 1px;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  border: 1px solid black;
+  box-shadow: 0.5rem 0.5rem 0.5rem black;
+}
+div.quotes1 p.quote {
+  margin: 1em;
+}
+div.quotes1 p.quote span.quote-mark {
+  color: #707;
+  font-size: 1.4em;
+}
+div.quotes1 p.quote span.author {
+  font-style: italic;
+}
+div.quotes2 {
+  position: relative;
+  background-color: #ddd;
+  padding: 1px;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+div.quotes2 p.quote {
+  white-space: pre-wrap;
+  margin: 1em;
+}
+div.quotes2 p.quote span.quote-mark {
+  color: #707;
+  font-size: 1.4em;
+}
+div.quotes2 p.quote span.author {
+  font-style: italic;
+}
+
+div.bible1 {
+  position: relative;
+  background-color: #ddd;
+  padding: 1px;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+div.bible1 p.quote {
+  margin: 1em;
+}
+div.bible1 p.quote span.quote-mark {
+  color: #707;
+  font-size: 1.4em;
+}
+div.bible1 p.quote span.author {
+  font-style: italic;
+}
+div.bible1 span.verse-number {
+  font-size: 0.8rem;
+  color: #333;
+}
+
+div.bookquote {
+  position: relative;
+  background-color: #ddd;
+  padding: 0.5rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+div.bookquote div.para { 
+  margin: 0rem;
+  margin-top: 0.5rem;
+}
+div.bookquote div.para:nth-child(1) {
+  margin-top: 0rem;
+}
+div.bookquote div.attrib::before {
+  content: '\002014';
+  padding-right: 0.5rem;
+}
+div.bookquote div.attrib {
+  text-align: right;
+  font-style: italic;
+}
+
+div.prayer1 {
+  position: relative;
+  background-color: #ddd;
+  padding: 0.5rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  border-radius: 0.5rem;
+}
+div.prayer1 div.prayer {
+  margin-bottom: 0.7rem;
+  padding-left: 2rem;
+}
+div.prayer1 div.prayer:has(span.who) {
+  text-indent: -2rem;
+}
+div.prayer1 span.who {
+  font-weight: bold;
+}
+div.prayer1 span.who::after {
+  content: ": ";
+}
+
+div.definition {
+  position: relative;
+  background-color: #ddd;
+  padding: 0.5rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  border-radius: 0.5rem;
+}
+div.definition > * {
+  padding-left: 2rem;
+  margin-bottom: 0rem;
+}
+div.definition > *:nth-child(1) {
+  margin-top: 0rem;
+  text-indent: -2rem;
+}
+div.definition > *:nth-child(1)::before {
+  content: "Definitiox. ";
+  font-weight: bold;
+}
+div.indblock {
+  position: relative;
+  background-color: #ddd;
+  padding: 0.5rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  border-radius: 0.5rem;
+}
+div.indblock p ,
+div.indblock ol {
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
+}
+div.indblock > * {
+  padding-left: 2rem;
+  margin-bottom: 0rem;
+}
+div.indblock span.heading {
+  font-weight: bold;
+}
+div.indblock > *:nth-child(1) {
+  margin-top: 0rem;
+  text-indent: -2rem;
+}
+
+div.warning {
+  border: 1px solid black;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  background-color: #ff7;
+  box-shadow: 0.5rem 0.5rem 0.5rem black;
+}
+div.warning div.warning-para {
+  margin: 0.5rem 0.5rem;
+}
+div.warning span.warning-prefix {
+  font-weight: bold;
+  color: red;
+}
+/*
+    $t = "<div class='quotes-script'>\n";
+    foreach($paras as $para) {
+      if( preg_match('/^(\S+):\s+(.*)$/s',$para,$m) ) {
+        [ $all, $who, $line ] = $m;
+        $t .= "<div class='script-line'><span class='who'>$who:</span> <span class='script-quote'>$line</span></div>\n";
+      } else if( preg_match('/^---\s+(.*)$/s',$para,$m) ) {
+        [ $all, $line ] = $m;
+        $t .= "<div class='attribution'><span class='dashes'>&mdash;</span> <span class='quote-source'>$line</span></div>\n";
+      } else {
+        $t .= "<div class='script-line'><span class='script-quote'>$line</span></div>\n";
+      }
+      */
+div.quotes-script {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+
+}
+div.quotes-script > div {
+  padding-left: 4rem;
+}
+div.quotes-script div.script-line.with-who {
+  text-indent: -4rem;
+}
+div.quotes-script span.who {
+  font-weight: bold;
+}
+div.quotes-script div.script-comment {
+  font-style: italic;
+}
+
+div.quotes-script div.attribution {
+  text-align: right;
+}
+div.quotes-script div.attribution span.quote-source {
+  font-style: italic;
+}
+
+div.note-to-self {
+  position: relative;
+  background-color: #fdd;
+  padding: 0.5rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  border-radius: 0.5rem;
+  border: 1px solid #f77;
+}
+div.note-to-self > *:nth-child(1)::before {
+  content: "Note to Self:";
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #700;
+}
+
+
+div.biblep {
+  background-color: #eed;
+  padding: 0.1rem 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border: 1px solid black;
+  box-shadow: 0.5rem 0.5rem 0.5rem black;
+}
+div.biblep p,
+div.biblep div {
+  margin-bottom: 0.5rem;
+}
+div.biblep .book-chapter {
+  font-weight: bold;
+  margin-bottom: 0.1rem;
+}
+div.biblep .bible-text {
+
+}
+div.biblep .bible-poetry {
+  padding-left: 2em;
+  white-space: pre-wrap;
+}
+div.biblep span.verse-number {
+  color: #666;
+  font-size: 0.8em;
+  vertical-align: super;
+}
+div.biblep span.verse-number span.continued {
+  color: #888;
+  font-size: 0.8em;
+}
+
+div.biblep .bible-comment {
+  font-style: italic;
+  color: #030;
+}
+div.biblep .note {
+  font-style: italic;
+  color: #700;
+}
+
+/*** INLINE SPECIALS ***/
+a.juce span.juce-prefix {
+  font-size: 0.8em;
+  color: #777;
+}
+
+/*** DIR SIDEBAR ***/
+div.sidebar {
+  display: none;
+  position: fixed;
+  top: 0px;
+  width: 20vw;
+  height: 90vh;
+  top: 5vh;
+  overflow-y: auto;
+  background: white;
+  color: black;
+}
+body[show-side]:not([show-side=""]) div.container {
+  max-width: 70vw;
+  margin-left: 22vw;
+}
+body[show-side="toc"] div.sidebar[sidebar="toc"],
+body[show-side="dir"] div.sidebar[sidebar="dir"]
+{
+  display: block;
+}
+div.sidebar h1 {
+  font-size: 1.2rem;
+}
+div.sidebar h2 {
+  font-size: 1.1rem;
+}
+div.sidebar h3 {
+  font-size: 1.0rem;
+}
+div.sidebar h4 {
+  font-size: 1.0rem;
+}
+div.sidebar h5 {
+  font-size: 1.0rem;
+}
+div.sidebar h6 {
+  font-size: 1.0rem;
+}
+div.sidebar ul {
+  list-style-type: none;
+}
+div.sidebar a {
+  color: black;
+  text-decoration: none;
+}
+div.sidebar a:hover {
+  color: #007;
+}
+div.sidebar div.toc-item[toc-level="h1"] {
+  padding-left: 0.0rem;
+}
+div.sidebar div.toc-item[toc-level="h2"] {
+  padding-left: 0.5rem;
+}
+div.sidebar div.toc-item[toc-level="h3"] {
+  padding-left: 1.0rem;
+}
+div.sidebar div.toc-item[toc-level="h4"] {
+  padding-left: 1.5rem;
+}
+div.sidebar div.toc-item[toc-level="h5"] {
+  padding-left: 2.0rem;
+}
+div.sidebar div.toc-item[toc-level="h6"] {
+  padding-left: 2.5rem;
+}
+
+
+/*** PRINT ***/
+@media print {
+  * {
+    background: none !important;
+  }
+  body, h1, h2, h3, h4, h5, h6 {
+    font-family: "Adobe Caslon Pro", serif !important;
+  }
+  div.container {
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  div.container header section {
+    display: none !important;
+    color: black !important;
+  }
+  div.container header section.title {
+    display: block !important;
+    color: black !important;
+  }
+  div.container header section.title h1,
+  div.container header section.title h2 {
+    display: block;
+  }
+}
+
+/*** UTILITY ***/
+div.plain[pre] div.plain-para {
+  white-space: pre-wrap;
+}
+
+.clearer {
+  clear: both;
+}
+
+/*** UPLOAD PROGRESS ***/
+dialog.paste-image-box img.preview {
+  display: block;
+  max-width: 40vw;
+  max-height: 40vh;
+  margin: 1rem;
+}
+div.upload-progress {
+  z-index: 10;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+div.upload-progress {
+  display: none;
+}
+div.upload-progress.pending {
+  display: block;
+}
+div.upload-progress td.progress-bar-cell canvas {
+  top: 0px;
+  height: 1rem;
+  width: 100%;
+}
+div.upload-progress table {
+  color: black;
+  width: 96vw;
+  font-size: 1rem;
+  position: absolute;
+  background: #ff7;
+  margin: 2vw;
+  border: 1px solid black;
+  box-shadow: 1em 1em 1em black;
+}
+div.upload-progress td.progress-bar-cell {
+  position: relative;
+  width: 100%;
+}
+div.upload-progress td.label {
+  white-space: pre;
+}
+
+/* MathJaX */
+mjx-container[display="true"] {
+margin: 0.5rem;
+padding: 0.5rem;
+border: 1px solid black;
+background: #eee;
+box-shadow: 0.5rem 0.5rem 0.5rem black;
+}
+
+/* Copyright */
+section.copyright {
+  text-align: center;
+  font-style: italic;
+  color: #007;
+}
+
+/* Code Blocks */
+section.main > pre.output {
+  font-family: "Hack Nerd Font Mono", "Hack Nerd Font", "Hack", monospace;
+  color: #afa;
+  background-color: #040;
+  box-shadow: 0.5rem 0.5rem 0.5rem black;
+  padding: 0.5rem;
+  border: 1px solid black;
+  box-shadow: 5px 5px 5px black;
+  overflow-x: auto;
+}
+body.pre-wrap section.main > pre.output {
+  white-space: pre-wrap;
+}
+
+/* Directory */
+div.dir.dir-style-1 {
+  border: 1px solid black;
+  box-shadow: 0.5rem 0.5rem 0.5rem black;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  margin-right: 2rem;
+  background-color: #ffd;
+}
+div.dir.dir-style-1 ul {
+  list-style-type: none;
+  padding-inline-start: 0px;
+  margin-inline-start: 1em;
+}
+div.dir.dir-style-1 li + li {
+  margin-top: 0.5em;
+}
+
+/* Recents */
+span.recent_path a.recent_dir {
+  color: #007;
+}
+span.recent_path a.recent_page {
+  color: #007;
+  font-weight: bold;
+}
+span.recent_path a.recent_file {
+  color: #007;
+  font-weight: bold;
+}

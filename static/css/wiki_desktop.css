@@ -1,0 +1,101 @@
+/*** ki_comTOPLEVEL ***/
+html {
+}
+
+body {
+}
+
+body.auth {
+}
+
+/*** DRAGON DROP ***/
+body.dragon div.container {
+  border: 5px dashed gray;
+}
+
+/*** CONTAINER ***/
+div.container {
+  position: relative;
+  background-color: white;
+  color: black;
+  box-sizing: border-box;
+  margin: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px;
+  width: 100%;
+  max-width: 60rem; 
+}
+body.full-width div.container {
+  margin-left: 0px;
+  margin-right: 0px;
+  max-width: none;
+  height: 100vh;
+}
+body.full-width {
+  padding: 0px;
+  margin: 0px;
+}
+
+
+
+
+header h1 span.homesuffix {
+  font-size: 0.7em;
+  color: gray;
+}
+.action {
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.action:hover {
+  background-color: #070;
+  border: 1px solid black;
+}
+
+/** TAGS **/
+header div.tags ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+header div.tags ul li a {
+  display: inline-block;
+  padding: 0.3em;
+}
+header div.tags ul li {
+  display: inline-block;
+  border: 1px solid black;
+  box-shadow: 0.3em 0.3em 0.3em black;
+  margin: 0.3em;
+}
+
+/** TODO: Media Print **/
+/* Hide options and stuff */
+/* Show full date/time of modification */
+/* Show breadcrumbs on same line as mtime */
+/* Header has 1px solid bottom border */
+/* Hide navbar */
+/* Show only title */
+
+/** NAVBAR **/
+
+/*** CONTENT ***/
+section.main {
+}
+
+/*** FOR NARROW WINDOWS ***/
+@media( max-width: 1024px ) {
+  /* Don't have page box -- take up entire window */
+  body {
+    margin: 0px !important;
+    padding: 0px !important;
+  }
+  div.container {
+    width: 100vw;
+    border: none;
+    box-shadow: none;
+    margin: 0px;
+    padding: 0px;
+  }
+}

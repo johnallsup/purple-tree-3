@@ -1,0 +1,165 @@
+/*** TOPLEVEL ***/
+html {
+}
+
+body {
+  background-color: #077; /* TODO */
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+body.auth {
+  background-color: #070; /* TODO */
+}
+
+/*** DRAGON DROP ***/
+body.dragon div.container {
+  border: 5px dashed gray;
+}
+
+/*** CONTAINER ***/
+div.container {
+  position: relative;
+  background-color: white; /* TODO */
+  color: black;
+}
+
+/*** HEADER ***/
+div.container > header {
+  font-family: sans-serif;
+}
+
+div.container > header section > div {
+  display: flex;
+  flex-direction: row;
+}
+div.container > header .spread {
+  justify-content: space-around;
+}
+div.container > header .spreadwide {
+  justify-content: space-between;
+}
+div.container > header .info {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+div.container > header section .spacer {
+  flex-grow: 1;
+}
+div.container > header section.topbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* spread so that it is hard to press the wrong one */
+}
+div.container > header section .block {
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  display: inline-block;
+  overflow: hidden;
+  font-size: 1.5rem;
+  text-align: center;
+  vertical-align: top;
+  line-height: 2em;
+  height: 2em;
+  width: 2em;
+}
+div.container > header section.title {
+  display: block;
+  padding: 0px;
+  background-color: orange;
+}
+div.container > header section.title h1 {
+  padding-top: 0.5rem;
+}
+div.container > header section.options {
+  background: #700;
+  display: none;
+  padding: 0.5rem;
+}
+body.hamburger div.container > header section.title {
+  display: none;
+}
+body.hamburger div.container > header section.options {
+  display: block;
+}
+div.container > header h1 {
+  text-align: center;
+}
+
+div.container > header h1 span.homesuffix {
+  font-size: 0.7em;
+  color: gray;
+}
+
+/** TAGS **/
+div.container > header div.tags ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+div.container > header div.tags ul li a {
+  display: inline-block;
+  padding: 0.3em;
+}
+div.container > header div.tags ul li {
+  display: inline-block;
+  border: 1px solid black;
+  box-shadow: 0.3em 0.3em 0.3em black;
+  margin: 0.3em;
+}
+
+/** TODO: Media Print **/
+/* Hide options and stuff */
+/* Show full date/time of modification */
+/* Show breadcrumbs on same line as mtime */
+/* Header has 1px solid bottom border */
+/* Hide navbar */
+/* Show only title */
+
+/** NAVBAR **/
+
+/*** CONTENT ***/
+section.main {
+  background-color: white;
+}
+
+/*** BLOCK COPY ***/
+pre code {
+  position: relative;
+}
+pre code .copy-button {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  content: "";
+}
+pre.jda-selected {
+  border: 2px solid red;
+}
+pre.jda-copied {
+  border: 2px solid #7F7;
+}
+div.container > header section .block {
+  padding: 0;
+  font-size: 1.2rem;
+  width: 1.5rem;
+  height: 2rem;
+}
+
+/*** FOR NARROW WINDOWS ***/
+@media( max-width: 1024px ) {
+  /* Don't have page box -- take up entire window */
+  body {
+    margin: 0px !important;
+    padding: 0px !important;
+  }
+  div.container {
+    width: 100vw;
+    border: none;
+    box-shadow: none;
+    margin: 0px;
+    padding: 0px;
+  }
+}
+

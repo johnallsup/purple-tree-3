@@ -1,0 +1,146 @@
+body {
+  box-sizing: border-box;
+  position: relative;
+  padding: 0.5em;
+  height: 100vh;
+  overflow: hidden;
+}
+body.show-dir div.container {
+  transform: translate(10vw,0);
+}
+div.container {
+  display: flex;
+  flex-direction: column;
+  height: 98%;
+}
+textarea.editor {
+  line-height: 1.3;
+  color: #ffa;
+  background-color: #002;
+}
+textarea[font-size="large"].editor {
+  font-size: 150%;
+}
+textarea[font-size="huge"].editor {
+  font-size: 200%;
+}
+body.blur textarea.editor {
+  xbackground-color: #ddd;
+  background-color: #222;
+  color: #eee;
+}
+textarea.editor {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 0.5em;
+}
+body.dirty textarea.editor {
+  border-color: red;
+}
+
+div.container > header {
+  background: #007;
+}
+header button.action {
+  padding: 0.3em;
+  box-shadow: 0.3em 0.3em 0.3em black;
+  margin: 0.3em;
+}
+header button.action.editor-fixquotes {
+  background-color: #ff7;
+}
+
+body.dirty .save {
+  background-color: red;
+}
+header.dont section .block {
+  font-size: 1.5rem;
+  text-align: center;
+  vertical-align: top;
+  line-height: 2em;
+  height: 2em;
+  width: 2em;
+}
+header section.title {
+  display: block;
+}
+header section.hamburger {
+  background: #700;
+  display: none;
+}
+body[options-bar] header section.title {
+  display: none;
+}
+body[options-bar="hamburger"] header section.hamburger {
+  display: block;
+}
+section.main {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+textarea.editor {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0.5rem;
+  border-width: 5px;
+}
+body.mobile div.content {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+}
+div.hello {
+  background-color: orange;
+}
+/*** Preview ***/
+dialog.preview-box {
+  padding: 0px;
+  margin: 0.5rem;
+  max-width: 60rem;
+  max-height: none;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0px;
+  box-sizing: border-box;
+  border: 2px solid green;
+  position: fixed;
+  top: 0vh;
+  width: 100%;
+  height: 98%;
+  background-color: white;
+  xtext-align: left;
+}
+dialog.preview-box header {
+  position: sticky;
+  z-index: 100;
+  top: 0px;
+}
+dialog.preview-box header section.topbar span.pagename-container {
+  display: inline-block;
+}
+dialog.preview-box header section.topbar span.pagename-before {
+  color: #aaa;
+  font-size: 0.7em;
+  margin-right: 0.5rem;
+}
+dialog.preview-box div.info {
+  color: white;
+  padding: 0.3rem;
+}
+dialog.preview-box section.main {
+  font-family: "Adobe Caslon Pro", serif;
+  padding: 1em;
+}
+body.stale header h1 {
+  background-color: #f005;
+}
+.CodeMirror {
+  height: 100% !important;
+}

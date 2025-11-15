@@ -1,0 +1,18 @@
+header .spread {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+header .spreadwide {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+header .text-size-options button {
+  border: none;
+  color: white;
+  background: none;
+  font-weight: bold;
+  font-size: 100%;
+  padding: 0.3rem;
+}

@@ -1,0 +1,10 @@
+#!/bin/bash
+s="$1"
+template_tar_xz=template.tar.xz
+if [[ -e "$s" ]]; then
+  echo "$s exists"
+  exit 1
+fi
+mkdir -p "$s" || { echo "Failed to create $s"; exit 1; }
+tar -C "$s" -xf "$template_tar_xz" || { echo "Failed to extract $template_tar_xz to $s"; exit 1; }
+vi "$s"/config/config.php

@@ -1,0 +1,153 @@
+/*** OVERLAYS ***/
+div.overlay {
+  display: none;
+  position: fixed;
+  padding: 1rem;
+}
+div.overlay table {
+  border: none;
+}
+div.overlay table tr:nth-child(even) {
+  background: none;
+}
+div.overlay.visible {
+  display: block;
+  box-sizing: border-box;
+  box-shadow: 0em 1em 1em black;
+}
+div.overlay.info-box {
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  min-height: 20vh;
+  background-color: #070;
+  color: white;
+}
+div.overlay.error-box {
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  min-height: 20vh;
+  background-color: #700;
+  color: white;
+}
+div.overlay.help-box {
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  background-color: #007;
+  color: white;
+  min-height: 50vh;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+div.overlay header {
+  background: none;
+}
+div.overlay .overlay-title {
+  display: inline-block;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+
+div.overlay.info-box h1 {
+  text-align: center;
+}
+div.overlay.info-box table.quick-keys {
+  padding: 1em;
+  font-size: 1.2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+div.overlay.info-box table.quick-keys td {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+div.overlay.info-box table.quick-keys .key {
+  xdisplay: inline-block;
+  width: 4em;
+  text-align: right;
+  font-family: monospace;
+}
+div.overlay.info-box table.quick-keys a {
+  color: white;
+}
+
+/*** OPTIONS BAR ***/
+body[options-bar] div.container > header section.title {
+  display: none;
+}
+body div.container > header section[subpage] {
+  display: none;
+}
+body[options-bar="hamburger"] div.container > header section[subpage="hamburger"] {
+  display: block;
+}
+body[options-bar="more-options"] div.container > header section[subpage="more-options"] {
+  display: block;
+}
+
+/*** EDITOR ***/
+body textarea.editor {
+  xbackground-color: blue;
+  xcolor: yellow;
+}
+body textarea.editor[font-size="large"] {
+  font-size: 150%;
+}
+body textarea.editor[font-size="huge"] {
+  font-size: 200%;
+}
+
+/*** DIALOGs ***/
+
+/** GOTO **/
+dialog.goto-box::backdrop {
+  background-color: hsl(200,0%,0%,0.3);
+}
+dialog.goto-box {
+  padding: 0px;
+  font-size: 2rem;
+  overflow-y: hidden;
+}
+dialog.goto-box input {
+  color: red;
+  font-size: 2rem;
+}
+dialog.goto-box section.content {
+  padding: 1em;
+}
+
+/** PREVIEW **/
+dialog.preview-box {
+  position: fixed;
+  top: 10vh;
+  left: 10vw;
+  width: 80vw;
+  height: 80vh;
+  overflow-y: auto;
+  background-color: white;
+  text-align: left;
+}
+dialog.preview-box header {
+  position: sticky;
+}
+dialog.preview-box header {
+  background-color: #070;
+}
+
+/*** DRAG AND DROP ***/
+body.dragon div.container {
+  border: 5px dashed red;
+}
+
+/*** MOVE TO VIEW ***/
+body.touch-mode section.main a {
+  display: inline-block;
+  border: 1px solid black;
+  margin: 0.2em;
+  padding: 0.3em;
+  background-color: #ffa;
+  box-shadow: 0.2em 0.2em 0.2em black;
+}

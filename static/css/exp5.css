@@ -1,0 +1,241 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  color: white;
+  overflow: hidden;
+}
+
+div.textarea:has(div.current span.left:empty) {
+  box-shadow: 1rem 1rem 1rem #070;
+}
+
+div.loading {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding-top: 30%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 4rem;
+  text-align: center;
+  background-color: #444;
+  color: #fee;
+}
+
+div.typing_app {
+  color: blue;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1; 
+}
+input.typing_input {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 0; 
+}
+
+div.typing_app div.ui_area {
+  border: 0px solid black;
+}
+
+div.typing_app div.header {
+  padding: 0.5rem;
+  flex: 0 1 auto;
+  background-color: #555;
+  color: white;
+}
+body.firstrep div.typing_app div.header {
+  background-color: #33a;
+}
+
+div.typing_app div.header div.score_board {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 16pt;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+div.typing_app div.main {
+  padding: 0.5rem 1.5em;
+  flex: 1 1 auto;
+  overflow-y: scroll;
+  background-color: white;
+  color: black;
+  white-space: pre-wrap;
+}
+div.typing_app.blur div.main
+{
+  background-color: #777;
+}
+div.typing_app.blur div.text_line.before, 
+div.typing_app.blur div.text_line.after
+{
+  background-color: #aaa;
+}
+div.typing_app div.main .attribution {
+  font-size: 12pt;
+}
+div.typing_app div.textarea {
+  font-family: monospace;
+  font-size: 16pt;
+  border: 1px solid black;
+  box-shadow: 5px 5px 5px black;
+}
+div.typing_app div.footer {
+  flex: 0 1 auto;
+  padding: 0.5rem;
+  background-color: #555;
+  color: white;
+}
+div.typing_app .text_line {
+  padding: 0.3rem;
+}
+div.typing_app div.text_line.before {
+  background-color: hsl(120,50%,80%);
+}
+div.typing_app div.text_line.current.errors {
+  background-color: hsl(0,50%,80%);
+}
+div.typing_app div.text_line.after {
+  background-color: hsl(30,50%,80%);
+}
+div.typing_app div.text_line.current {
+  background-color: hsl(60,50%,70%);
+}
+div.typing_app div.text_line.current.errors {
+  background-color: hsl(0,50%,70%);
+}
+div.typing_app div.text_line.current .left {
+  background-color: hsl(120,50%,70%);
+}
+div.typing_app div.text_line.current .right {
+  background-color: hsl(60,50%,70%);
+}
+div.typing_app div.text_line .mid {
+  background-color: black;
+  color: white;
+}
+div.typing_app div.text_line .errors {
+  color: red;
+  padding-left: 5rem;
+  font-family: serif;
+}
+div.typing_app div.text_line .non-zero-errors {
+  border-bottom: 1px solid black;
+}
+
+div.typing_app .last_keys {
+  font-family: monospace;
+  font-size: 16pt;
+  white-space: pre;
+  background-color: #770;
+}
+div.typing_app .last_keys span.correct {
+  background-color: green;
+  color: white;
+}
+div.typing_app .last_keys span.expected {
+  background-color: hsl(18,50%,30%);
+  color: white;
+}
+div.typing_app .last_keys span.wrong {
+  background-color: red;
+  color: white;
+}
+
+.error_policy_button button {
+  padding: 0.5rem;
+  border: 1px solid black;
+  background-color: #070;
+  color: white;
+  font-weight: bold;
+}
+
+span.linestats {
+  font-family: serif;
+  background-color: #fed;
+  border: 1px solid black;
+  padding: 0.1rem;
+}
+
+span.linestats span.current-errors {
+  color: red;
+}
+
+span.linestats span.total-errors {
+  color: #730;
+}
+
+span.linestats span.wrong-attempts {
+  color: #770;
+}
+
+span.scoreboard_element {
+  display: inline-block;
+  text-align: center;
+}
+span.scoreboard_element.error_policy_button {
+  flex: 1;
+}
+span.scoreboard_element.percentage {
+  flex: 3;
+}
+span.scoreboard_element.wpm {
+  flex: 2;
+}
+span.scoreboard_element.line_number {
+  flex: 1;
+}
+span.scoreboard_element.time_elapsed {
+  flex: 1;
+}
+
+dialog.error-dialog[open] {
+  display: flex;
+  z-index: 2;
+}
+dialog.error-dialog {
+  position: fixed;
+  top: 5vh;
+  left: 60vw;
+  flex-direction: row;
+}
+dialog.error-dialog > div {
+  display: flex;
+  flex-direction: column;
+}
+dialog.error-dialog div.expected-key,
+dialog.error-dialog div.actual-key {
+  font-size: 4em;
+  text-align: center;
+  width: 6rem;
+  height: 6rem;
+  text-align: center;
+}
+
+dialog.error-dialog div.expected-key {
+  color: white;
+  background-color: #550;
+}
+dialog.error-dialog div.actual-key {
+  color: white;
+  background-color: #700;
+}  
+dialog.error-dialog div.label {
+  font-size: 2rem;
+  text-align: center;
+}
+span.horn {
+  display: none;
+}
+body.horn span.horn {
+  display: inline;
+}

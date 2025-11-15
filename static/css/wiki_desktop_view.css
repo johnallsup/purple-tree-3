@@ -1,0 +1,62 @@
+body {
+  position: relative;
+  padding: 0.5em;
+}
+body.show-dir div.container {
+  transform: translate(10vw,0);
+}
+div.container {
+  box-sizing: border-box;
+  margin: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px;
+  width: 100%;
+  box-shadow: 0 0.7rem 1rem black;
+}
+footer {
+  margin-top: 1em;
+  text-align: center;
+}
+footer a {
+  color: #ff7;
+  text-decoration: none;
+}
+
+div.container > header {
+  background: black;
+}
+
+section.main {
+  margin: 0px;
+  padding: 1rem;
+}
+header section.title {
+  display: block;
+}
+header section.title nav {
+  background-color: black;
+  padding: 0.5em 2em;
+  color: white;
+}
+header section.title nav p {
+  display: inline-block;
+  margin: 0px;
+}
+header section.title nav a {
+  color: #aaf;
+}
+
+header section[subpage='hamburger'] {
+  background: #700;
+  display: none;
+}
+body[options-bar] header section.title {
+  display: none;
+}
+body[options-bar="hamburger"] header section[subpage='hamburger'] {
+  display: block;
+}
+body.stale header h1 {
+  background-color: #f005;
+}
