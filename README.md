@@ -157,3 +157,21 @@ Wiki system that can manage an arbitrary number of subdomains
 with a single pile of code.
 
 The `.tar.xz` of everything is about 280K.
+
+## Usage
+The system uses a standard LAMP stack. It runs happily on my local Ubuntu
+machines. On the Web it is hosted by an Ionos shared hosting package.
+Crucially, you make sites inside the `sites` subdirectory, and each
+site directory has a `root` directory inside it. Point the webserver
+at the `root` directory, and ensure it has write access to the `files`
+and `versions` and `data` subdirectories.
+
+It uses `mod_rewrite`, so that needs to be enabled.
+
+You need to be confident using `ssh` and a text editor to configure
+things: there is no admin frontend. You need to add your own auth
+code to decide who can view and edit. The auth code I use is not
+provided. Basically you check cookies in some way, or such,
+but how you do that is up to you. If you would like to develop
+a web frontend for admin, feel free to fork this project and
+develop one.
